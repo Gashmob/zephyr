@@ -9,7 +9,12 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/zephyr.js",
-      "require": "./dist/zephyr.umd.cjs"
+      "require": "./dist/zephyr.cjs"
+    },
+    "./hello-world": {
+      "types": "./dist/hello-world/index.d.ts",
+      "import": "./dist/hello-world.js",
+      "require": "./dist/hello-world.cjs"
     }
   },
   "scripts": {
@@ -36,5 +41,8 @@
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.0.6"
   },
-  "packageManager": "pnpm@10.20.0"
+  "packageManager": "pnpm@10.20.0",
+  "dependencies": {
+    "hybrids": "^9.1.20"
+  }
 }

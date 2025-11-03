@@ -21,4 +21,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-export declare const HELLO_WORLD = "Hello World!";
+
+import { define, html } from "hybrids";
+
+export const TAG = "zr-hello-world";
+
+export const HelloWorldElement = define.compile({
+    tag: "zr-hello-world",
+    render: () => html`<span>Hello World!</span>`,
+});
+
+if (!window.customElements.get(TAG)) {
+    window.customElements.define(TAG, HelloWorldElement);
+}

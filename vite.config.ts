@@ -31,8 +31,12 @@ export default defineConfig({
     plugins: [dts()],
     build: {
         minify: "esbuild",
+        outDir: "dist",
         lib: {
-            entry: path.resolve(__dirname, "src/index.ts"),
+            entry: {
+                "zephyr": path.resolve(__dirname, "src/index.ts"),
+                "hello-world": path.resolve(__dirname, "src/hello-world/index.ts"),
+            },
             name: "zephyr",
         },
         rollupOptions: {

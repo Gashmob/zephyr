@@ -22,4 +22,6 @@
  * SOFTWARE.
  */
 
-export const HELLO_WORLD = "Hello World!";
+import "./hello-world";
+
+export { HelloWorldElement } from "./hello-world";
