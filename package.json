@@ -1,0 +1,40 @@
+{
+  "name": "@gashmob/zephyr",
+  "description": "Style and component library",
+  "author": "Kevin Traini <kevin@ktraini.com>",
+  "homepage": "https://github.com/Gashmob/zephyr",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/zephyr.js",
+      "require": "./dist/zephyr.umd.cjs"
+    }
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "vite build",
+    "tests:unit": "vitest --run",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@types/node": "^24.10.0",
+    "eslint": "^9.39.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "jiti": "^2.6.1",
+    "jsdom": "^27.1.0",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3",
+    "vite": "^7.1.12",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^4.0.6"
+  },
+  "packageManager": "pnpm@10.20.0"
+}

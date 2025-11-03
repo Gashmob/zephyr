@@ -1,0 +1,5 @@
+{
+  "src/**/*": [
+    "eslint --config eslint.config.ts"
+  ]
+}
