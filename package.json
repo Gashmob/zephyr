@@ -20,12 +20,25 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "build": "vite build",
+    "build:storybook": "storybook build --docs",
     "tests:unit": "vitest --run",
-    "prepare": "husky"
+    "tests:storybook": "vitest --run --project=storybook",
+    "prepare": "husky",
+    "storybook": "storybook dev -p 8080 -h localhost",
+    "test:browser": "vitest --config=vitest.browser.config.ts"
+  },
+  "dependencies": {
+    "hybrids": "^9.1.20"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.0",
+    "@storybook/addon-a11y": "^10.0.4",
+    "@storybook/addon-docs": "^10.0.3",
+    "@storybook/addon-links": "^10.0.3",
+    "@storybook/addon-vitest": "^10.0.4",
+    "@storybook/web-components-vite": "^10.0.3",
     "@types/node": "^24.10.0",
+    "@vitest/browser-playwright": "^4.0.7",
     "eslint": "^9.39.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
@@ -34,15 +47,15 @@
     "jiti": "^2.6.1",
     "jsdom": "^27.1.0",
     "lint-staged": "^16.2.6",
+    "lit": "^3.3.1",
     "prettier": "^3.6.2",
+    "storybook": "^10.0.3",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3",
     "vite": "^7.1.12",
     "vite-plugin-dts": "^4.5.4",
-    "vitest": "^4.0.6"
+    "vitest": "^4.0.7",
+    "vitest-browser-lit": "^1.0.1"
   },
-  "packageManager": "pnpm@10.20.0",
-  "dependencies": {
-    "hybrids": "^9.1.20"
-  }
+  "packageManager": "pnpm@10.20.0"
 }
