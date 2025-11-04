@@ -25,8 +25,7 @@
     "tests:unit": "vitest --run",
     "tests:storybook": "vitest --run --project=storybook",
     "prepare": "husky",
-    "storybook": "storybook dev -p 8080 -h localhost",
-    "test:browser": "vitest --config=vitest.browser.config.ts"
+    "storybook": "storybook dev -p 8080 -h localhost"
   },
   "dependencies": {
     "hybrids": "^9.1.20"
