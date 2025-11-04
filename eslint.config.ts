@@ -25,18 +25,20 @@ import eslint from "@eslint/js";
 import { defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 import plugin_import from "eslint-plugin-import";
-import plugin_prettier from "eslint-plugin-prettier/recommended";
+import stylistic from "@stylistic/eslint-plugin";
 
 export default defineConfig(
-    globalIgnores(["dist/**", "src/vite-env.d.ts", "src-tauri/**", ".idea"]),
+    globalIgnores(["dist/**", "storybook-static/**", ".idea"]),
     {
         files: ["*.{ts,vue}"],
+        plugins: {
+            "@stylistic": stylistic,
+        },
         extends: [
             eslint.configs.recommended,
             tseslint.configs.strict,
             tseslint.configs.stylistic,
             plugin_import.flatConfigs.typescript,
-            plugin_prettier,
         ],
         rules: {
             "no-template-curly-in-string": "error",
@@ -44,10 +46,10 @@ export default defineConfig(
             "@typescript-eslint/no-unused-vars": ["error", { caughtErrorsIgnorePattern: "^_" }],
             "array-callback-return": "warn",
             "consistent-return": "warn",
-            curly: "error",
+            "curly": "error",
             "default-case": "warn",
             "dot-notation": "warn",
-            eqeqeq: "warn",
+            "eqeqeq": "warn",
             "no-alert": "error",
             "no-console": "error",
             "no-caller": "error",
@@ -79,8 +81,27 @@ export default defineConfig(
             "no-useless-return": "warn",
             "no-void": "error",
             "no-with": "error",
-            radix: "error",
+            "radix": "error",
             "require-await": "error",
+            // Stylistic
+            "@stylistic/array-bracket-spacing": ["error", "never"],
+            "@stylistic/comma-dangle": ["error", "always-multiline"],
+            "@stylistic/eol-last": ["error", "always"],
+            "@stylistic/indent": ["error", 4],
+            "@stylistic/linebreak-style": ["error", "unix"],
+            "@stylistic/max-len": ["error", {
+                code: 100,
+                tabWidth: 4,
+                ignoreComments: true,
+            }],
+            "@stylistic/object-curly-spacing": ["error", "always"],
+            "@stylistic/quote-props": ["error", "consistent-as-needed"],
+            "@stylistic/quotes": ["error", "double", {
+                avoidEscape: true,
+                allowTemplateLiterals: "avoidEscape",
+            }],
+            "@stylistic/semi": ["error", "always"],
+            "@stylistic/spaced-comment": ["error", "always"],
             // Typescript
             "@typescript-eslint/camelcase": "off",
             "@typescript-eslint/naming-convention": [
