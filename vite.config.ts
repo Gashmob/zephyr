@@ -35,13 +35,16 @@ export default defineConfig({
         lib: {
             entry: {
                 "zephyr": path.resolve(__dirname, "src/index.ts"),
-                "hello-world": path.resolve(__dirname, "src/hello-world/index.ts"),
+                "hello-world": path.resolve(__dirname, "src/components/hello-world/hello-world.ts"),
             },
             name: "zephyr",
         },
         rollupOptions: {
             output: {
                 esModule: true,
+                globals: {
+                    hybrids: "hybrids",
+                },
             },
         },
     },

@@ -22,6 +22,4 @@
  * SOFTWARE.
  */
 
-import "./hello-world";
-
-export { HelloWorldElement } from "./hello-world";
+import "./components/hello-world/hello-world.ts";

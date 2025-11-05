@@ -22,15 +22,11 @@
  * SOFTWARE.
  */
 
-import { define, html } from "hybrids";
+import { describe, expect, it } from "vitest";
+import "./hello-world.ts";
 
-export const TAG = "zr-hello-world";
-
-export const HelloWorldElement = define.compile({
-    tag: "zr-hello-world",
-    render: () => html`<span>Hello World!</span>`,
+describe("hello-world", () => {
+    it("should pass", () => {
+        expect(true).toBe(true);
+    });
 });
-
-if (!window.customElements.get(TAG)) {
-    window.customElements.define(TAG, HelloWorldElement);
-}

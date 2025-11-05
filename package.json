@@ -4,15 +4,15 @@
   "author": "Kevin Traini <kevin@ktraini.com>",
   "homepage": "https://github.com/Gashmob/zephyr",
   "type": "module",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/src/index.d.ts",
       "import": "./dist/zephyr.js",
       "require": "./dist/zephyr.cjs"
     },
     "./hello-world": {
-      "types": "./dist/hello-world/index.d.ts",
+      "types": "./dist/src/components/hello-world/index.d.ts",
       "import": "./dist/hello-world.js",
       "require": "./dist/hello-world.cjs"
     }
@@ -22,7 +22,7 @@
     "eslint": "eslint --config eslint.config.ts",
     "build": "vite build",
     "build:storybook": "storybook build --docs",
-    "tests:unit": "vitest --run",
+    "tests:unit": "vitest --run --project=unit",
     "tests:storybook": "vitest --run --project=storybook",
     "prepare": "husky",
     "storybook": "storybook dev -p 8080 -h localhost"

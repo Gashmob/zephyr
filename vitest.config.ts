@@ -24,9 +24,7 @@
 
 import { defineConfig, defineProject, mergeConfig } from "vitest/config";
 import { playwright } from "@vitest/browser-playwright";
-
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
-
 import path from "node:path";
 import viteConfig from "./vite.config";
 
@@ -35,6 +33,13 @@ export default mergeConfig(
     defineConfig({
         test: {
             projects: [
+                defineProject({
+                    test: {
+                        name: "unit",
+                        include: ["src/**/*.test.ts"],
+                        environment: "jsdom",
+                    },
+                }),
                 defineProject({
                     plugins: [
                         storybookTest({
