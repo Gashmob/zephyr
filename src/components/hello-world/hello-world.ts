@@ -21,20 +21,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-import { Meta, StoryObj } from "@storybook/web-components-vite";
-import { html } from "lit";
-import "../../../src/components/hello-world/hello-world.ts";
 
-type HelloWorldProps = {};
+import { define, html } from "hybrids";
 
-const meta: Meta<HelloWorldProps> = {
-    render: () => html`
-        <zr-hello-world></zr-hello-world>`,
-};
-export default meta;
+export const TAG = "zr-hello-world";
 
-type Story = StoryObj<HelloWorldProps>;
+export const HelloWorldElement = define.compile({
+    tag: TAG,
+    render: () => html`<span>Hello World!</span>`,
+});
 
-export const HelloWorldStory: Story = {};
-
-
+if (!window.customElements.get(TAG)) {
+    window.customElements.define(TAG, HelloWorldElement);
+}
