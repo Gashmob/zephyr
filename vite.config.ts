@@ -25,6 +25,7 @@
 import { defineConfig } from "vite";
 import * as path from "node:path";
 import dts from "vite-plugin-dts";
+import autoprefixer from "autoprefixer";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -32,9 +33,11 @@ export default defineConfig({
     build: {
         minify: "esbuild",
         outDir: "dist",
+        cssCodeSplit: true,
         lib: {
             entry: {
                 "zephyr": path.resolve(__dirname, "src/index.ts"),
+                "colors": path.resolve(__dirname, "src/styles/colors.scss"),
                 "hello-world": path.resolve(__dirname, "src/components/hello-world/hello-world.ts"),
             },
             name: "zephyr",
@@ -45,6 +48,16 @@ export default defineConfig({
                 globals: {
                     hybrids: "hybrids",
                 },
+            },
+        },
+    },
+    css: {
+        postcss: {
+            plugins: [autoprefixer()],
+        },
+        preprocessorOptions: {
+            scss: {
+                syntax: "scss",
             },
         },
     },

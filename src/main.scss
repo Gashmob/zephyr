@@ -21,42 +21,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-import { Preview } from "@storybook/web-components-vite";
-import { html } from "lit";
 
-const preview: Preview = {
-    parameters: {
-        layout: "centered",
-        options: {
-            storySort: {
-                order: [
-                    "Home",
-                    "Components",
-                    "Styles",
-                ],
-            },
-        },
-        a11y: { test: "error" },
-    },
-    globalTypes: {
-        theme: {
-            toolbar: {
-                title: "Theme",
-                icon: "circlehollow",
-                items: ["light", "dark", "system"],
-                dynamicTitle: true,
-            },
-        },
-    },
-    initialGlobals: {
-        theme: "system",
-    },
-    decorators: [
-        (Story, context) => {
-            context.canvasElement.ownerDocument.body.setAttribute("data-theme", context.globals.theme);
-            return html`${Story()}`;
-        },
-    ],
-};
-
-export default preview;
+@use "normalize.css/normalize.css";
+@use "./styles/colors";
