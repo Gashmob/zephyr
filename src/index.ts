@@ -22,4 +22,5 @@
  * SOFTWARE.
  */
 
+import "./main.scss";
 import "./components/hello-world/hello-world.ts";

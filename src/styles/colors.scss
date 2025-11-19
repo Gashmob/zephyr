@@ -21,42 +21,39 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-import { Preview } from "@storybook/web-components-vite";
-import { html } from "lit";
 
-const preview: Preview = {
-    parameters: {
-        layout: "centered",
-        options: {
-            storySort: {
-                order: [
-                    "Home",
-                    "Components",
-                    "Styles",
-                ],
-            },
-        },
-        a11y: { test: "error" },
-    },
-    globalTypes: {
-        theme: {
-            toolbar: {
-                title: "Theme",
-                icon: "circlehollow",
-                items: ["light", "dark", "system"],
-                dynamicTitle: true,
-            },
-        },
-    },
-    initialGlobals: {
-        theme: "system",
-    },
-    decorators: [
-        (Story, context) => {
-            context.canvasElement.ownerDocument.body.setAttribute("data-theme", context.globals.theme);
-            return html`${Story()}`;
-        },
-    ],
-};
+:root {
+  --zr-color-primary: oklch(0.3007 0.0882 256.7);
+  --zr-color-secondary: oklch(0.6203 0.0838 215.35);
 
-export default preview;
+  --zr-color-info: oklch(0.837 0.147 185.48);
+  --zr-color-success: oklch(0.831 0.244 135.356);
+  --zr-color-warning: oklch(0.744 0.181 56.458);
+  --zr-color-danger: oklch(0.597 0.232 28.108);
+
+  --zr-color-background: oklch(0.9612 0 0);
+  --zr-color-background-secondary: oklch(0.8452 0 0);
+}
+
+@mixin dark-colors {
+  --zr-color-primary: oklch(0.5007 0.0882 256.7);
+  --zr-color-secondary: oklch(0.8203 0.0838 215.35);
+
+  --zr-color-info: oklch(0.837 0.147 185.48);
+  --zr-color-success: oklch(0.831 0.244 135.356);
+  --zr-color-warning: oklch(0.744 0.181 56.458);
+  --zr-color-danger: oklch(0.597 0.232 28.108);
+
+  --zr-color-background: oklch(0.2612 0 0);
+  --zr-color-background-secondary: oklch(0.3452 0 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  body[data-theme=system] {
+    @include dark-colors;
+  }
+}
+
+body[data-theme=dark] {
+  @include dark-colors;
+}

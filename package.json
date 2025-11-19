@@ -2,14 +2,18 @@
   "name": "@gashmob/zephyr",
   "description": "Style and component library",
   "author": "Kevin Traini <kevin@ktraini.com>",
-  "homepage": "https://github.com/Gashmob/zephyr",
+  "homepage": "https://gashmob.github.io/zephyr/",
   "type": "module",
   "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/src/index.d.ts",
+      "scss": "./dist/zephyr.css",
       "import": "./dist/zephyr.js",
       "require": "./dist/zephyr.cjs"
+    },
+    "./colors": {
+      "scss": "./dist/colors.css"
     },
     "./hello-world": {
       "types": "./dist/src/components/hello-world/index.d.ts",
@@ -28,7 +32,8 @@
     "storybook": "storybook dev -p 8080 -h localhost"
   },
   "dependencies": {
-    "hybrids": "^9.1.20"
+    "hybrids": "^9.1.20",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.0",
@@ -40,6 +45,7 @@
     "@stylistic/eslint-plugin": "^5.5.0",
     "@types/node": "^24.10.0",
     "@vitest/browser-playwright": "^4.0.7",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9.39.0",
     "eslint-plugin-import": "^2.32.0",
     "husky": "^9.1.7",
@@ -47,6 +53,7 @@
     "jsdom": "^27.1.0",
     "lint-staged": "^16.2.6",
     "lit": "^3.3.1",
+    "sass-embedded": "^1.93.3",
     "storybook": "^10.0.3",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3",
@@ -55,5 +62,5 @@
     "vitest": "^4.0.7",
     "vitest-browser-lit": "^1.0.1"
   },
-  "packageManager": "pnpm@10.20.0"
+  "packageManager": "pnpm@10.22.0"
 }

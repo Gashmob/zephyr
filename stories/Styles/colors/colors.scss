@@ -21,42 +21,45 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-import { Preview } from "@storybook/web-components-vite";
-import { html } from "lit";
 
-const preview: Preview = {
-    parameters: {
-        layout: "centered",
-        options: {
-            storySort: {
-                order: [
-                    "Home",
-                    "Components",
-                    "Styles",
-                ],
-            },
-        },
-        a11y: { test: "error" },
-    },
-    globalTypes: {
-        theme: {
-            toolbar: {
-                title: "Theme",
-                icon: "circlehollow",
-                items: ["light", "dark", "system"],
-                dynamicTitle: true,
-            },
-        },
-    },
-    initialGlobals: {
-        theme: "system",
-    },
-    decorators: [
-        (Story, context) => {
-            context.canvasElement.ownerDocument.body.setAttribute("data-theme", context.globals.theme);
-            return html`${Story()}`;
-        },
-    ],
-};
+@use "../../../src/styles/colors";
 
-export default preview;
+.doc-color {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 3px;
+  border-radius: 16px;
+
+  &-primary {
+    background-color: var(--zr-color-primary);
+  }
+
+  &-secondary {
+    background-color: var(--zr-color-secondary);
+  }
+
+  &-info {
+    background-color: var(--zr-color-info);
+  }
+
+  &-success {
+    background-color: var(--zr-color-success);
+  }
+
+  &-warning {
+    background-color: var(--zr-color-warning);
+  }
+
+  &-danger {
+    background-color: var(--zr-color-danger);
+  }
+
+  &-background {
+    background-color: var(--zr-color-background);
+  }
+
+  &-background-secondary {
+    background-color: var(--zr-color-background-secondary);
+  }
+}
