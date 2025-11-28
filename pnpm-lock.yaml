@@ -10,7 +10,7 @@ importers:
     dependencies:
       hybrids:
         specifier: ^9.1.20
-        version: 9.1.20
+        version: 9.1.21
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
@@ -1629,8 +1629,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  hybrids@9.1.20:
-    resolution: {integrity: sha512-mq4vWW6vwb5hx4KNgWcT0Cd7yoG2TM4D5D/6nvqAPkIWTy+zyN6IhXYQbS2xdAFfh+BTweTCGYfchEzcp1xsSA==}
+  hybrids@9.1.21:
+    resolution: {integrity: sha512-UCmdUmFkQogser0LR1BpBDipXpfLmJG+XQsLMoQfJTae1/D6pxaowMDNZa5u8Axd8jVEzNAXILbE2GWTGtiYhA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -4417,7 +4417,7 @@ snapshots:
 
   husky@9.1.7: {}
 
-  hybrids@9.1.20: {}
+  hybrids@9.1.21: {}
 
   iconv-lite@0.6.3:
     dependencies:
