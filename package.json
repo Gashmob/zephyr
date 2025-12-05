@@ -1,5 +1,6 @@
 {
   "name": "@gashmob/zephyr",
+  "version": "1.0.0-rc1",
   "description": "Style and component library",
   "author": "Kevin Traini <kevin@ktraini.com>",
   "homepage": "https://gashmob.github.io/zephyr/",
@@ -14,6 +15,9 @@
     },
     "./colors": {
       "scss": "./dist/colors.css"
+    },
+    "./text": {
+      "scss": "./dist/text.css"
     },
     "./hello-world": {
       "types": "./dist/src/components/hello-world/index.d.ts",
@@ -32,11 +36,14 @@
     "storybook": "storybook dev -p 8080 -h localhost"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "hybrids": "^9.1.20",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.0",
+    "@fontsource-utils/scss": "^0.2.2",
     "@storybook/addon-a11y": "^10.0.4",
     "@storybook/addon-docs": "^10.0.3",
     "@storybook/addon-links": "^10.0.3",
@@ -62,5 +69,5 @@
     "vitest": "^4.0.7",
     "vitest-browser-lit": "^1.0.1"
   },
-  "packageManager": "pnpm@10.22.0"
+  "packageManager": "pnpm@10.24.0"
 }

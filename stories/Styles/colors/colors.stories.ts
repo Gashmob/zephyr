@@ -46,46 +46,36 @@ export const MainColorsStory: Story = {
                 <td><code>--zr-color-primary</code></td>
             </tr>
             <tr>
-                <td><span class="doc-color doc-color-secondary"></span></td>
-                <td><code>--zr-color-secondary</code></td>
+                <td><span class="doc-color doc-color-border"></span></td>
+                <td><code>--zr-color-border</code></td>
             </tr>
             <tr>
-                <td><span class="doc-color doc-color-info"></span></td>
-                <td><code>--zr-color-info</code></td>
+                <td><span class="doc-color doc-color-font"></span></td>
+                <td><code>--zr-color-font</code></td>
             </tr>
             <tr>
-                <td><span class="doc-color doc-color-success"></span></td>
-                <td><code>--zr-color-success</code></td>
+                <td><span class="doc-color doc-color-font-info"></span></td>
+                <td><code>--zr-color-font-info</code></td>
             </tr>
             <tr>
-                <td><span class="doc-color doc-color-warning"></span></td>
-                <td><code>--zr-color-warning</code></td>
+                <td><span class="doc-color doc-color-font-success"></span></td>
+                <td><code>--zr-color-font-success</code></td>
             </tr>
             <tr>
-                <td><span class="doc-color doc-color-danger"></span></td>
-                <td><code>--zr-color-danger</code></td>
-            </tr>
-            </tbody>
-        </table>`,
-};
-
-export const OtherColorsStory: Story = {
-    render: () => html`
-        <table>
-            <thead>
-            <tr>
-                <th>Visual</th>
-                <th>Class name</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><span class="doc-color doc-color-background"></span></td>
-                <td><code>--zr-color-background</code></td>
+                <td><span class="doc-color doc-color-font-warning"></span></td>
+                <td><code>--zr-color-font-warning</code></td>
             </tr>
             <tr>
-                <td><span class="doc-color doc-color-background-secondary"></span></td>
-                <td><code>--zr-color-background-secondary</code></td>
+                <td><span class="doc-color doc-color-font-danger"></span></td>
+                <td><code>--zr-color-font-danger</code></td>
+            </tr>
+            <tr>
+                <td><span class="doc-color doc-color-kbd-background"></span></td>
+                <td><code>--zr-color-kbd-background</code></td>
+            </tr>
+            <tr>
+                <td><span class="doc-color doc-color-kbd-font"></span></td>
+                <td><code>--zr-color-kbd-font</code></td>
             </tr>
             </tbody>
         </table>`,
