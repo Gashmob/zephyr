@@ -1,0 +1,17 @@
+import {Canvas, Meta} from "@storybook/addon-docs/blocks";
+import TypographyMeta, * as TypographyStories from "./typography.stories.ts";
+import "./typography.scss";
+
+<Meta of={TypographyMeta}/>
+
+# Typography
+
+#### `@gashmob/zephyr/text`
+
+## Titles
+
+<Canvas of={TypographyStories.TitleStory}></Canvas>
+
+## Text
+
+<Canvas of={TypographyStories.TextStory}></Canvas>

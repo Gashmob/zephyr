@@ -26,10 +26,14 @@ import { defineConfig } from "vite";
 import * as path from "node:path";
 import dts from "vite-plugin-dts";
 import autoprefixer from "autoprefixer";
+import { NodePackageImporter } from "sass-embedded";
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [dts()],
+    plugins: [dts({
+        include: "src/**/*.ts",
+        exclude: "src/**/*.test.ts",
+    })],
     build: {
         minify: "esbuild",
         outDir: "dist",
@@ -38,6 +42,7 @@ export default defineConfig({
             entry: {
                 "zephyr": path.resolve(__dirname, "src/index.ts"),
                 "colors": path.resolve(__dirname, "src/styles/colors.scss"),
+                "text": path.resolve(__dirname, "src/styles/text.scss"),
                 "hello-world": path.resolve(__dirname, "src/components/hello-world/hello-world.ts"),
             },
             name: "zephyr",
@@ -58,6 +63,7 @@ export default defineConfig({
         preprocessorOptions: {
             scss: {
                 syntax: "scss",
+                importers: [new NodePackageImporter()],
             },
         },
     },

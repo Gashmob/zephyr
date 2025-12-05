@@ -23,41 +23,8 @@
  */
 
 :root {
-  --zr-color-primary: oklch(0.3007 0.0882 256.7);
-
-  --zr-color-border: oklch(0.7 0.05 250);
-
-  --zr-color-font: oklch(0.1 0 0);
-  --zr-color-font-info: oklch(0.837 0.147 185.48);
-  --zr-color-font-success: oklch(0.831 0.244 135.356);
-  --zr-color-font-warning: oklch(0.744 0.181 56.458);
-  --zr-color-font-danger: oklch(0.597 0.232 28.108);
-
-  --zr-color-kbd-background: oklch(0.1 0 0);
-  --zr-color-kbd-font: oklch(1 0 0);
-}
-
-@mixin dark-colors {
-  --zr-color-primary: oklch(0.5007 0.0882 256.7);
-
-  --zr-color-border: oklch(0.15 0.005 250);
-
-  --zr-color-font: oklch(0.95 0 0);
-  --zr-color-font-info: oklch(0.837 0.147 185.48);
-  --zr-color-font-success: oklch(0.831 0.244 135.356);
-  --zr-color-font-warning: oklch(0.744 0.181 56.458);
-  --zr-color-font-danger: oklch(0.597 0.232 28.108);
-
-  --zr-color-kbd-background: oklch(0.8 0 0);
-  --zr-color-kbd-font: oklch(0.1 0 0);
-}
-
-@media (prefers-color-scheme: dark) {
-  body[data-theme=system] {
-    @include dark-colors;
-  }
-}
-
-body[data-theme=dark] {
-  @include dark-colors;
+  --zr-spacing-small: 4px;
+  --zr-spacing-medium: 8px;
+  --zr-spacing-large: 16px;
+  --zr-spacing-extra-large: 24px;
 }
