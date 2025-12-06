@@ -1,0 +1,17 @@
+import {Canvas, Meta} from "@storybook/addon-docs/blocks";
+import PanesMeta, * as PanesStories from "./panes.stories.ts";
+import "./panes.scss";
+
+<Meta of={PanesMeta}/>
+
+# Panes & Cards
+
+#### `@gashmob/zephyr/panes`
+
+## Panes
+
+<Canvas of={PanesStories.PanesStory} ></Canvas>
+
+## Cards
+
+<Canvas of={PanesStories.CardsStory} ></Canvas>

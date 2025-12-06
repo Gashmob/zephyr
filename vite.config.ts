@@ -43,6 +43,7 @@ export default defineConfig({
                 "zephyr": path.resolve(__dirname, "src/index.ts"),
                 "colors": path.resolve(__dirname, "src/styles/colors.scss"),
                 "text": path.resolve(__dirname, "src/styles/text.scss"),
+                "panes": path.resolve(__dirname, "src/styles/panes.scss"),
                 "hello-world": path.resolve(__dirname, "src/components/hello-world/hello-world.ts"),
             },
             name: "zephyr",
