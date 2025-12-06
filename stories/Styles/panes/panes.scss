@@ -22,11 +22,4 @@
  * SOFTWARE.
  */
 
-:root {
-  --zr-spacing-small: 4px;
-  --zr-spacing-medium: 8px;
-  --zr-spacing-large: 16px;
-  --zr-spacing-extra-large: 24px;
-
-  --zr-rounding-medium: 8px;
-}
+@use "../../../src/styles/panes";
