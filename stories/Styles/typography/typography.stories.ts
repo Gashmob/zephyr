@@ -33,13 +33,15 @@ type Story = StoryObj;
 
 export const TitleStory: Story = {
     render: () => html`
-        <div>
-            <h1>Level 1 heading</h1>
-            <h2>Level 2 heading</h2>
-            <h3>Level 3 heading</h3>
-            <h4>Level 4 heading</h4>
-            <h5>Level 5 heading</h5>
-            <h6>Level 6 heading</h6>
+        <div class="zr-pane">
+            <div class="zr-pane-section">
+                <h1>Level 1 heading</h1>
+                <h2>Level 2 heading</h2>
+                <h3>Level 3 heading</h3>
+                <h4>Level 4 heading</h4>
+                <h5>Level 5 heading</h5>
+                <h6>Level 6 heading</h6>
+            </div>
         </div>`,
 };
 
@@ -50,32 +52,34 @@ const cpp_code = "#include <iostream>\n" +
     "}"
 export const TextStory: Story = {
     render: () => html`
-        <div>
-            <p>This is some text with <em>emphasised words</em> but also <strong>strong words</strong>. You can also
-                write <sub>sub</sub> or <sup>sup</sup>. And sometimes you can even write <code>code</code>.</p>
-            <blockquote>
-                Citation are important, many person said many things
-            </blockquote>
-            <ul>
-                <li>Here</li>
-                <li>is some</li>
+        <div class="zr-pane">
+            <div class="zr-pane-section">
+                <p>This is some text with <em>emphasised words</em> but also <strong>strong words</strong>. You can also
+                    write <sub>sub</sub> or <sup>sup</sup>. And sometimes you can even write <code>code</code>.</p>
+                <blockquote>
+                    Citation are important, many person said many things
+                </blockquote>
                 <ul>
-                    <li>bullet list</li>
+                    <li>Here</li>
+                    <li>is some</li>
+                    <ul>
+                        <li>bullet list</li>
+                    </ul>
                 </ul>
-            </ul>
-            <ol>
-                <li>and also</li>
-                <li>some</li>
                 <ol>
-                    <li>number list</li>
+                    <li>and also</li>
+                    <li>some</li>
+                    <ol>
+                        <li>number list</li>
+                    </ol>
                 </ol>
-            </ol>
-            <pre><code class="language-cpp">${cpp_code}</code></pre>
-            <a href="https://example.com">https://example.com</a>
-            <p>Press <kbd>Ctrl</kbd> + <kbd>P</kbd> to print the page</p>
-            <p class="zr-text-info">For your information</p>
-            <p class="zr-text-success">The result is successful</p>
-            <p class="zr-text-warning">Warning</p>
-            <p class="zr-text-danger">Danger</p>
+                <pre><code class="language-cpp">${cpp_code}</code></pre>
+                <a href="https://example.com">https://example.com</a>
+                <p>Press <kbd>Ctrl</kbd> + <kbd>P</kbd> to print the page</p>
+                <p class="zr-text-info">For your information</p>
+                <p class="zr-text-success">The result is successful</p>
+                <p class="zr-text-warning">Warning</p>
+                <p class="zr-text-danger">Danger</p>
+            </div>
         </div>`,
 };

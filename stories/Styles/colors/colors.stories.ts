@@ -33,50 +33,87 @@ type Story = StoryObj;
 
 export const MainColorsStory: Story = {
     render: () => html`
-        <table>
-            <thead>
-            <tr>
-                <th>Visual</th>
-                <th>Class name</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><span class="doc-color doc-color-primary"></span></td>
-                <td><code>--zr-color-primary</code></td>
-            </tr>
-            <tr>
-                <td><span class="doc-color doc-color-border"></span></td>
-                <td><code>--zr-color-border</code></td>
-            </tr>
-            <tr>
-                <td><span class="doc-color doc-color-font"></span></td>
-                <td><code>--zr-color-font</code></td>
-            </tr>
-            <tr>
-                <td><span class="doc-color doc-color-font-info"></span></td>
-                <td><code>--zr-color-font-info</code></td>
-            </tr>
-            <tr>
-                <td><span class="doc-color doc-color-font-success"></span></td>
-                <td><code>--zr-color-font-success</code></td>
-            </tr>
-            <tr>
-                <td><span class="doc-color doc-color-font-warning"></span></td>
-                <td><code>--zr-color-font-warning</code></td>
-            </tr>
-            <tr>
-                <td><span class="doc-color doc-color-font-danger"></span></td>
-                <td><code>--zr-color-font-danger</code></td>
-            </tr>
-            <tr>
-                <td><span class="doc-color doc-color-kbd-background"></span></td>
-                <td><code>--zr-color-kbd-background</code></td>
-            </tr>
-            <tr>
-                <td><span class="doc-color doc-color-kbd-font"></span></td>
-                <td><code>--zr-color-kbd-font</code></td>
-            </tr>
-            </tbody>
-        </table>`,
+        <div class="zr-pane">
+            <h1 class="zr-pane-title">Many color</h1>
+            <div class="zr-pane-section">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Visual</th>
+                        <th>Class name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="doc-color doc-color-primary"></span></td>
+                        <td><code>--zr-color-primary</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-secondary"></span></td>
+                        <td><code>--zr-color-secondary</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-border"></span></td>
+                        <td><code>--zr-color-border</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-font"></span></td>
+                        <td><code>--zr-color-font</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-font-info"></span></td>
+                        <td><code>--zr-color-font-info</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-font-success"></span></td>
+                        <td><code>--zr-color-font-success</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-font-warning"></span></td>
+                        <td><code>--zr-color-font-warning</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-font-danger"></span></td>
+                        <td><code>--zr-color-font-danger</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-background-info"></span></td>
+                        <td><code>--zr-color-background-info</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-background-success"></span></td>
+                        <td><code>--zr-color-background-success</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-background-warning"></span></td>
+                        <td><code>--zr-color-background-warning</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-background-danger"></span></td>
+                        <td><code>--zr-color-background-danger</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-kbd-background"></span></td>
+                        <td><code>--zr-color-kbd-background</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-kbd-font"></span></td>
+                        <td><code>--zr-color-kbd-font</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-pane-background"></span></td>
+                        <td><code>--zr-color-pane-background</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-pane-border"></span></td>
+                        <td><code>--zr-color-pane-border</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="doc-color doc-color-pane-shadow"></span></td>
+                        <td><code>--zr-color-pane-shadow</code></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>`,
 };

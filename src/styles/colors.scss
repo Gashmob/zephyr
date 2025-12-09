@@ -29,10 +29,15 @@
   --zr-color-border: oklch(0.7 0.05 250);
 
   --zr-color-font: oklch(0.1 0 0);
-  --zr-color-font-info: oklch(0.837 0.147 185.48);
-  --zr-color-font-success: oklch(0.831 0.244 135.356);
-  --zr-color-font-warning: oklch(0.744 0.181 56.458);
-  --zr-color-font-danger: oklch(0.597 0.232 28.108);
+  --zr-color-font-info: oklch(58.8% 0.158 241.966);
+  --zr-color-font-success: oklch(62.7% 0.194 149.214);
+  --zr-color-font-warning: oklch(64.6% 0.222 41.116);
+  --zr-color-font-danger: oklch(57.7% 0.245 27.325);
+
+  --zr-color-background-info: oklch(95.1% 0.026 236.824);
+  --zr-color-background-success: oklch(96.2% 0.044 156.743);
+  --zr-color-background-warning: oklch(95.4% 0.038 75.164);
+  --zr-color-background-danger: oklch(93.6% 0.032 17.717);
 
   --zr-color-kbd-background: oklch(0.1 0 0);
   --zr-color-kbd-font: oklch(1 0 0);
@@ -46,19 +51,24 @@
   --zr-color-primary: oklch(0.5007 0.0882 256.7);
   --zr-color-secondary: oklch(0.459 0.079 255.657);
 
-  --zr-color-border: oklch(0.15 0.005 250);
+  --zr-color-border: oklch(0.3 0.005 250);
 
   --zr-color-font: oklch(0.95 0 0);
-  --zr-color-font-info: oklch(0.837 0.147 185.48);
-  --zr-color-font-success: oklch(0.831 0.244 135.356);
-  --zr-color-font-warning: oklch(0.744 0.181 56.458);
-  --zr-color-font-danger: oklch(0.597 0.232 28.108);
+  --zr-color-font-info: oklch(95.1% 0.026 236.824);
+  --zr-color-font-success: oklch(96.2% 0.044 156.743);
+  --zr-color-font-warning: oklch(95.4% 0.038 75.164);
+  --zr-color-font-danger: oklch(93.6% 0.032 17.717);
+
+  --zr-color-background-info: oklch(58.8% 0.158 241.966);
+  --zr-color-background-success: oklch(62.7% 0.194 149.214);
+  --zr-color-background-warning: oklch(64.6% 0.222 41.116);
+  --zr-color-background-danger: oklch(57.7% 0.245 27.325);
 
   --zr-color-kbd-background: oklch(0.8 0 0);
   --zr-color-kbd-font: oklch(0.1 0 0);
 
   --zr-color-pane-background: oklch(0.1 0 0);
-  --zr-color-pane-border: oklch(0.12 0 0);
+  --zr-color-pane-border: var(--zr-color-border);
   --zr-color-pane-shadow: oklch(0 0 0 / 0);
 }
 
