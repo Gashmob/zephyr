@@ -21,5 +21,34 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+import { Meta, StoryObj } from "@storybook/web-components-vite";
+import { html } from "lit";
 
-@use "../../../src/main";
+const meta: Meta = {
+    title: "Styles/Alerts",
+};
+export default meta;
+
+type Story = StoryObj;
+
+export const AlertsStory: Story = {
+    render: () => html`
+        <div class="zr-pane">
+            <h1 class="zr-pane-title">Some alerts</h1>
+            <div class="zr-pane-section alert-container">
+                <div class="zr-alert-info">
+                    This is an info message
+                </div>
+                <div class="zr-alert-success">
+                    This is a success message
+                </div>
+                <div class="zr-alert-warning">
+                    This is a warning message
+                </div>
+                <div class="zr-alert-danger">
+                    This is a danger message
+                </div>
+            </div>
+        </div>
+    `,
+};

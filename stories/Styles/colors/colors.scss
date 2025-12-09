@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-@use "../../../src/styles/colors";
+@use "../../../src/main";
 
 .doc-color {
   display: block;
@@ -34,6 +34,10 @@
 
   &-primary {
     background-color: var(--zr-color-primary);
+  }
+
+  &-secondary {
+    background-color: var(--zr-color-secondary);
   }
 
   &-border {
@@ -60,6 +64,22 @@
     background-color: var(--zr-color-font-danger);
   }
 
+  &-background-info {
+    background-color: var(--zr-color-background-info);
+  }
+
+  &-background-success {
+    background-color: var(--zr-color-background-success);
+  }
+
+  &-background-warning {
+    background-color: var(--zr-color-background-warning);
+  }
+
+  &-background-danger {
+    background-color: var(--zr-color-background-danger);
+  }
+
   &-kbd-background {
     background-color: var(--zr-color-kbd-background);
   }
@@ -67,5 +87,19 @@
   &-kbd-font {
     background-color: var(--zr-color-kbd-font);
     border: 3px solid var(--zr-color-kbd-background);
+  }
+
+  &-pane-background {
+    background-color: var(--zr-color-pane-background);
+    border: 3px solid var(--zr-color-pane-border);
+  }
+
+  &-pane-border {
+    background-color: var(--zr-color-pane-border);
+  }
+
+  &-pane-shadow {
+    background-color: var(--zr-color-pane-shadow);
+    border: 3px solid var(--zr-color-pane-border);
   }
 }

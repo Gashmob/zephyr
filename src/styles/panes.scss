@@ -26,7 +26,7 @@
 @use "colors";
 @use "text";
 
-.zr-pane { // TODO: fix padding and margin
+.zr-pane {
   background-color: var(--zr-color-pane-background);
   border: 1px solid var(--zr-color-pane-border);
   border-radius: var(--zr-rounding-medium);

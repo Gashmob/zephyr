@@ -22,4 +22,30 @@
  * SOFTWARE.
  */
 
-@use "../../../src/main";
+@use "vars";
+@use "colors";
+@use "text";
+
+@mixin alert-div($border-color, $background-color) {
+  padding: var(--zr-spacing-large) var(--zr-spacing-extra-large);
+  color: $border-color;
+  border-left: 4px solid $border-color;
+  border-radius: var(--zr-rounding-medium);
+  background-color: $background-color;
+}
+
+.zr-alert-info {
+  @include alert-div(var(--zr-color-font-info), var(--zr-color-background-info));
+}
+
+.zr-alert-success {
+  @include alert-div(var(--zr-color-font-success), var(--zr-color-background-success));
+}
+
+.zr-alert-warning {
+  @include alert-div(var(--zr-color-font-warning), var(--zr-color-background-warning));
+}
+
+.zr-alert-danger {
+  @include alert-div(var(--zr-color-font-danger), var(--zr-color-background-danger));
+}

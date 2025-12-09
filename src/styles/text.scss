@@ -34,7 +34,9 @@
 :root {
   --zr-font-family: "Inter Variable", sans-serif;
   --zr-font-family-mono: "JetBrains Mono Variable", monospace;
+}
 
+body {
   font-family: var(--zr-font-family);
   color: var(--zr-color-font);
 }
