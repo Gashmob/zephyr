@@ -22,12 +22,32 @@
  * SOFTWARE.
  */
 
-:root {
-  --zr-spacing-small: 4px;
-  --zr-spacing-medium: 8px;
-  --zr-spacing-large: 16px;
-  --zr-spacing-extra-large: 24px;
+@use "../../../src/main";
 
-  --zr-rounding-small: 4px;
-  --zr-rounding-medium: 8px;
+.width-story {
+  background-color: var(--zr-color-pane-border);
+}
+
+.width-story > * {
+  background-color: var(--zr-color-pane-background);
+  padding: var(--zr-spacing-large);
+  border-radius: var(--zr-rounding-small);
+  text-wrap: nowrap;
+  user-select: all;
+}
+
+.center-story {
+  width: 100%;
+  height: 100px;
+  background-color: var(--zr-color-pane-border);
+}
+
+.center-story > div {
+  background-color: var(--zr-color-pane-background);
+  width: fit-content;
+  padding: var(--zr-spacing-medium)
+}
+
+.zr-pane {
+  margin: 0;
 }

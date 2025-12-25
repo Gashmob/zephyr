@@ -1,0 +1,27 @@
+import {Canvas, Controls, Meta} from "@storybook/addon-docs/blocks";
+import LayoutMeta, * as LayoutStories from "./layout.stories.ts";
+import "./layout.scss";
+
+<Meta of={LayoutMeta}/>
+
+# Layout
+
+#### `@gashmob/zephyr/layout`
+
+## Showcase
+
+<Canvas of={LayoutStories.ShowcaseStory}></Canvas>
+
+## Widths
+
+<Canvas of={LayoutStories.WidthsStory}></Canvas>
+
+Additionally, there is also `zr-layout-full-height` and `zr-layout-full-view-height` classes for height related rules.
+
+## Center
+
+These classes should be used with `zr-layout-flex`, they aim to help for item alignment in a flex container.
+
+<Canvas of={LayoutStories.CenterStory}></Canvas>
+
+<Controls of={LayoutStories.CenterStory}></Controls>

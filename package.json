@@ -25,6 +25,9 @@
     "./alerts": {
       "scss": "./dist/alerts.css"
     },
+    "./layout": {
+      "scss": "./dist/layout.css"
+    },
     "./hello-world": {
       "types": "./dist/src/components/hello-world/index.d.ts",
       "import": "./dist/hello-world.js",
@@ -75,5 +78,5 @@
     "vitest": "^4.0.7",
     "vitest-browser-lit": "^1.0.1"
   },
-  "packageManager": "pnpm@10.24.0"
+  "packageManager": "pnpm@10.25.0"
 }
