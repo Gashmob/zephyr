@@ -45,6 +45,19 @@
   --zr-color-pane-background: oklch(0.98 0 0);
   --zr-color-pane-border: oklch(0.95 0 0);
   --zr-color-pane-shadow: oklch(0.9 0 0);
+
+  --zr-color-tabs-font: var(--zr-color-font);
+  --zr-color-tabs-font-active: var(--zr-color-primary);
+  --zr-color-tabs-background: oklch(0.98 0 0);
+  --zr-color-tabs-background-active: oklch(0.95 0 0);
+  --zr-color-tabs-background-info: oklch(95.1% 0.026 236.824);
+  --zr-color-tabs-background-success: oklch(96.2% 0.044 156.743);
+  --zr-color-tabs-background-warning: oklch(95.4% 0.038 75.164);
+  --zr-color-tabs-background-danger: oklch(93.6% 0.032 17.717);
+  --zr-color-tabs-background-info-active: oklch(74.6% 0.16 232.661);
+  --zr-color-tabs-background-success-active: oklch(79.2% 0.209 151.711);
+  --zr-color-tabs-background-warning-active: oklch(75% 0.183 55.934);
+  --zr-color-tabs-background-danger-active: oklch(70.4% 0.191 22.216);
 }
 
 @mixin dark-colors {

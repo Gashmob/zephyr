@@ -21,12 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+import { Meta, StoryObj } from "@storybook/web-components-vite";
+import { html } from "lit";
 
-@use "normalize.css/normalize.css";
-@use "./styles/vars";
-@use "./styles/colors";
-@use "./styles/text";
-@use "./styles/panes";
-@use "./styles/alerts";
-@use "./styles/layout";
-@use "./styles/tabs";
+const meta: Meta = {
+    title: "Styles/Tabs",
+};
+export default meta;
+
+type Story = StoryObj;
+
+export const TabsStory: Story = {
+    render: () => html`
+        <div class="zr-tabs">
+            <a href="https://example.com">This is a link</a>
+            <button>This is a button</button>
+            <a href="#" class="zr-tab-active"> Current tab</a>
+            <a href="#" class="zr-tab-disabled">I'm disabled</a>
+            <a href="#" class="zr-tab-info">Info</a>
+            <a href="#" class="zr-tab-success">Success</a>
+            <a href="#" class="zr-tab-warning">Warning</a>
+            <a href="#" class="zr-tab-danger">Danger</a>
+        </div>
+    `,
+};
