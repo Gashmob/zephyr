@@ -1,0 +1,93 @@
+/**
+ * MIT License
+ *
+ * Copyright (c) 2025-Present Kevin Traini
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+@use "vars";
+@use "colors";
+
+.zr-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+
+  > * {
+    padding: var(--zr-spacing-medium) var(--zr-spacing-large);
+    background-color: var(--zr-color-tabs-background);
+    border: none;
+    border-bottom: 1px solid var(--zr-color-tabs-font);
+    color: var(--zr-color-tabs-font);
+    transition: background-color 200ms ease;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+      background-color: var(--zr-color-tabs-background-active);
+    }
+
+    &.zr-tab-active {
+      font-weight: bold;
+      color: var(--zr-color-tabs-font-active);
+      border-color: var(--zr-color-tabs-font-active);
+      border-width: 3px;
+      background-color: var(--zr-color-tabs-background-active);
+    }
+
+    &.zr-tab-disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+    &.zr-tab-info {
+      background-color: var(--zr-color-tabs-background-info);
+
+      &:hover {
+        background-color: var(--zr-color-tabs-background-info-active);
+      }
+    }
+
+    &.zr-tab-success {
+      background-color: var(--zr-color-tabs-background-success);
+
+      &:hover {
+        background-color: var(--zr-color-tabs-background-success-active);
+      }
+    }
+
+    &.zr-tab-warning {
+      background-color: var(--zr-color-tabs-background-warning);
+
+      &:hover {
+        background-color: var(--zr-color-tabs-background-warning-active);
+      }
+    }
+
+    &.zr-tab-danger {
+      background-color: var(--zr-color-tabs-background-danger);
+
+      &:hover {
+        background-color: var(--zr-color-tabs-background-danger-active);
+      }
+    }
+  }
+}
