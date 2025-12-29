@@ -1,0 +1,10 @@
+import {Canvas, Controls, Meta} from "@storybook/addon-docs/blocks";
+import DateDisplayMeta, * as DateDisplayStories from "./date-display.stories.ts";
+
+<Meta of={DateDisplayMeta}/>
+
+# Date display
+
+<Canvas withToolbar={true} of={DateDisplayStories.DateDisplayStory}></Canvas>
+
+<Controls of={DateDisplayStories.DateDisplayStory}></Controls>

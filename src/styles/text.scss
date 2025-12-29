@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-@use "pkg:@fontsource-utils/scss" as fontsource;
-@use "pkg:@fontsource-variable/inter/scss" as inter;
-@use "pkg:@fontsource-variable/jetbrains-mono/scss" as jetbrains_mono;
+@use "@fontsource-utils/scss" as fontsource;
+@use "@fontsource-variable/inter/scss" as inter;
+@use "@fontsource-variable/jetbrains-mono/scss" as jetbrains_mono;
 @use "vars";
 @use "colors";
 
@@ -107,6 +107,10 @@ ul,ol {
   > ul,ol {
     padding-left: var(--zr-spacing-large);
   }
+}
+
+.zr-text-muted {
+  color: var(--zr-color-font-muted);
 }
 
 .zr-text-info {

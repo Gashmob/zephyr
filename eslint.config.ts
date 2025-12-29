@@ -110,7 +110,10 @@ export default defineConfig(
             ],
             "@typescript-eslint/class-literal-property-style": "error",
             "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: "never" }],
-            "@typescript-eslint/consistent-type-imports": "error",
+            "@typescript-eslint/consistent-type-imports": ["error", {
+                prefer: "type-imports",
+                fixStyle: "separate-type-imports",
+            }],
             "@typescript-eslint/explicit-function-return-type": "error",
             "@typescript-eslint/no-explicit-any": "error",
             "@typescript-eslint/no-non-null-assertion": "error",
@@ -121,6 +124,7 @@ export default defineConfig(
             // import
             "import/no-duplicates": "error",
             "import/no-extraneous-dependencies": "error",
+            "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
         },
     },
 );

@@ -21,20 +21,41 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-import { Meta, StoryObj } from "@storybook/web-components-vite";
-import { html } from "lit";
-import "../../../src/components/hello-world/hello-world.ts";
 
-type HelloWorldProps = {};
+@use "../../styles/vars";
+@use "../../styles/text";
 
-const meta: Meta<HelloWorldProps> = {
-    render: () => html`
-        <zr-hello-world></zr-hello-world>`,
-};
-export default meta;
+zr-date-display {
+  @mixin info-styles {
+    text-wrap: nowrap;
+    font-size: 0.8em;
+    font-style: inherit;
+    color: var(--zr-color-font-muted);
+  }
 
-type Story = StoryObj<HelloWorldProps>;
+  > [data-info-position="top"]::before {
+    @include info-styles;
+    content: attr(data-info-content);
+    position: absolute;
+    top: -2px;
+    left: 7px;
+  }
 
-export const HelloWorldStory: Story = {};
+  > [data-info-position="right"]::after {
+    @include info-styles;
+    content: attr(data-info-content);
+  }
 
+  > [data-info-position="bottom"]::before {
+    @include info-styles;
+    content: attr(data-info-content);
+    position: absolute;
+    bottom: -2px;
+    left: 7px;
+  }
 
+  > [data-info-position="left"]::before {
+    @include info-styles;
+    content: attr(data-info-content);
+  }
+}
