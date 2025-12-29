@@ -24,4 +24,4 @@
 
 import "./constants.ts";
 import "./main.scss";
-import "./components/hello-world/hello-world.ts";
+import "./components/date-display/date-display.ts";

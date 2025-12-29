@@ -76,6 +76,7 @@ export const TextStory: Story = {
                 <pre><code class="language-cpp">${cpp_code}</code></pre>
                 <a href="https://example.com">https://example.com</a>
                 <p>Press <kbd>Ctrl</kbd> + <kbd>P</kbd> to print the page</p>
+                <p class="zr-text-muted">Muted text</p>
                 <p class="zr-text-info">For your information</p>
                 <p class="zr-text-success">The result is successful</p>
                 <p class="zr-text-warning">Warning</p>

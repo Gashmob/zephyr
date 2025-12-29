@@ -48,7 +48,8 @@ export default defineConfig({
                 "layout": path.resolve(__dirname, "src/styles/layout.scss"),
                 "tabs": path.resolve(__dirname, "src/styles/tabs.scss"),
                 "badges": path.resolve(__dirname, "src/styles/badges.scss"),
-                "hello-world": path.resolve(__dirname, "src/components/hello-world/hello-world.ts"),
+                "date-display":
+                    path.resolve(__dirname, "src/components/date-display/date-display.ts"),
             },
             name: "zephyr",
         },
