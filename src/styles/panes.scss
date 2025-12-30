@@ -22,8 +22,9 @@
  * SOFTWARE.
  */
 
+@use "sass:map";
 @use "vars";
-@use "colors";
+@use "colors" as colors;
 @use "text";
 
 .zr-pane {
@@ -109,6 +110,12 @@
   }
 
   > .zr-card-border {
-    border-top: var(--zr-border-medium) solid var(--zr-color-primary);
+    border-top: var(--zr-border-medium) solid;
+
+    @each $name, $var in colors.$common_colors {
+      &.zr-card-border-#{$name} {
+        border-color: var(#{$var});
+      }
+    }
   }
 }
