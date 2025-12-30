@@ -21,13 +21,43 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+import { Meta, StoryObj } from "@storybook/web-components-vite";
+import { html } from "lit";
+import { COMMON_COLORS, CommonColor, red_500 } from "../../../src/constants.ts";
 
-@use "normalize.css/normalize.css";
-@use "./styles/vars";
-@use "./styles/colors";
-@use "./styles/text";
-@use "./styles/panes";
-@use "./styles/alerts";
-@use "./styles/layout";
-@use "./styles/tabs";
-@use "./styles/badges";
+type BadgeProps = {
+    content: string;
+    color: CommonColor;
+}
+
+const meta: Meta<BadgeProps> = {
+    title: "Styles/Badges",
+    args: {
+        content: "Badge",
+        color: red_500,
+    },
+    argTypes: {
+        content: {
+            name: "Content",
+            description: "Text in the badge",
+            type: "string",
+            control: "text",
+        },
+        color: {
+            name: "Color",
+            description: "Color of the badge",
+            type: "string",
+            control: "select",
+            options: COMMON_COLORS,
+        },
+    },
+};
+export default meta;
+
+type Story = StoryObj<BadgeProps>;
+
+export const BadgeStory: Story = {
+    render: (args: BadgeProps) => html`
+        <span class="zr-badge zr-badge-${args.color}">${args.content}</span>
+    `,
+};

@@ -22,12 +22,4 @@
  * SOFTWARE.
  */
 
-@use "normalize.css/normalize.css";
-@use "./styles/vars";
-@use "./styles/colors";
-@use "./styles/text";
-@use "./styles/panes";
-@use "./styles/alerts";
-@use "./styles/layout";
-@use "./styles/tabs";
-@use "./styles/badges";
+@use "../../../src/main";
