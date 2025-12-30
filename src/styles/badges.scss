@@ -22,12 +22,51 @@
  * SOFTWARE.
  */
 
-@use "normalize.css/normalize.css";
-@use "./styles/vars";
-@use "./styles/colors";
-@use "./styles/text";
-@use "./styles/panes";
-@use "./styles/alerts";
-@use "./styles/layout";
-@use "./styles/tabs";
-@use "./styles/badges";
+@use "sass:map";
+@use "sass:string";
+@use "sass:list";
+@use "colors" as colors;
+@use "text";
+
+@function number($string) {
+  // Matrices
+  $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
+  $numbers: 0 1 2 3 4 5 6 7 8 9;
+
+  // Result
+  $result: 0;
+
+  // Looping through all characters
+  @for $i from 1 through str-length($string) {
+    $character: str-slice($string, $i, $i);
+    $index: index($strings, $character);
+
+    @if not $index {
+      @warn "Unknown character `#{$character}`.";
+      @return false;
+    }
+
+    $number: nth($numbers, $index);
+    $result: $result * 10 + $number;
+  }
+
+  @return $result;
+}
+
+.zr-badge {
+  padding: var(--zr-spacing-small) var(--zr-spacing-medium);
+  font-size: 0.8em;
+  border-radius: 50px;
+  font-weight: 600;
+
+  @each $name, $var in colors.$common_colors {
+    &.zr-badge-#{$name} {
+      background-color: var(#{$var});
+      @if (number(list.nth(string.split($name, "-"), 2)) <= 300) {
+        color: black;
+      } @else {
+        color: white;
+      }
+    }
+  }
+}
