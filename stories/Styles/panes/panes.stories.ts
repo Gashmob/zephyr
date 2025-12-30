@@ -25,7 +25,7 @@ import { Meta, StoryObj } from "@storybook/web-components-vite";
 import { html } from "lit";
 
 const meta: Meta = {
-    title: "Styles/Panes",
+    title: "Styles/Panes & Cards",
 };
 export default meta;
 
@@ -81,5 +81,26 @@ export const PanesStory: Story = {
 };
 
 export const CardsStory: Story = {
-    render: () => html`TODO`,
+    render: () => html`
+        <div class="zr-layout-flex cards-flex">
+            <div class="zr-card">
+                <h1 class="zr-card-title">Card title</h1>
+                <p>The body of the card</p>
+            </div>
+            <div class="zr-card">
+                <h1 class="zr-card-title">Card with an image</h1>
+                <img src="/wallpaper.png" alt="wallpaper" class="zr-card-image">
+            </div>
+            <div class="zr-card">
+                <div class="zr-card-border"></div>
+                <h1 class="zr-card-title">Card with a top border</h1>
+                <p>TODO: the top border should use later added common colors</p>
+                <code>zr-card-border-{color}</code>
+            </div>
+            <div class="zr-card">
+                <img src="/wallpaper.png" alt="wallpaper" class="zr-card-image">
+                <h1 class="zr-card-title">Card with image on top</h1>
+            </div>
+        </div>
+    `,
 };

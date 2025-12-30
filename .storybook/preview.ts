@@ -37,6 +37,7 @@ const preview: Preview = {
             },
         },
         a11y: { test: "error" },
+        backgrounds: { disable: true },
     },
     globalTypes: {
         theme: {
@@ -54,6 +55,9 @@ const preview: Preview = {
     decorators: [
         (Story, context) => {
             context.canvasElement.ownerDocument.body.setAttribute("data-theme", context.globals.theme);
+            context.canvasElement.ownerDocument.body.querySelectorAll<HTMLDivElement>(".docs-story").forEach(
+                (elt) => elt.style.backgroundColor = "var(--zr-color-background)",
+            );
             return html`${Story()}`;
         },
     ],
