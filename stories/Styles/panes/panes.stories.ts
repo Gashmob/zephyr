@@ -92,9 +92,9 @@ export const CardsStory: Story = {
                 <img src="/wallpaper.png" alt="wallpaper" class="zr-card-image">
             </div>
             <div class="zr-card">
-                <div class="zr-card-border"></div>
+                <div class="zr-card-border zr-card-border-lime-500"></div>
                 <h1 class="zr-card-title">Card with a top border</h1>
-                <p>TODO: the top border should use later added common colors</p>
+                <p>The border can use common colors</p>
                 <code>zr-card-border-{color}</code>
             </div>
             <div class="zr-card">
