@@ -23,3 +23,11 @@
  */
 
 @use "../../../src/main";
+
+.cards-flex {
+  align-items: stretch;
+
+  > * {
+    width: 250px;
+  }
+}
