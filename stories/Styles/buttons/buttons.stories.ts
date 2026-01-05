@@ -106,7 +106,22 @@ export const ButtonsStory: Story = {
 };
 
 export const ButtonBarStory: Story = {
-    render: () => html`Not implemented yet`,
+    render: (args: ButtonProps) => html`
+        <div class="zr-layout-flex-column zr-layout-flex-gap-large">
+            <div class="zr-button-bar">
+                <button class="zr-button zr-button-${args.color}">Left</button>
+                <button class="zr-button zr-button-${args.color}">Center</button>
+                <button class="zr-button zr-button-${args.color}" disabled>Disabled</button>
+                <button class="zr-button zr-button-${args.color}">Right</button>
+            </div>
+            <div class="zr-button-bar zr-button-bar-rounded">
+                <button class="zr-button zr-button-${args.color}">Left</button>
+                <button class="zr-button zr-button-${args.color}">Center</button>
+                <button class="zr-button zr-button-${args.color}" disabled>Disabled</button>
+                <button class="zr-button zr-button-${args.color}">Right</button>
+            </div>
+        </div>
+    `,
 };
 
 export const SwitchStory: Story = {

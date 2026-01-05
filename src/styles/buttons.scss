@@ -83,6 +83,10 @@
   &:hover {
     cursor: pointer;
     text-decoration: none;
+
+    &:not([disabled]) {
+      filter: brightness(90%);
+    }
   }
 
   &:active {
@@ -91,5 +95,28 @@
 
   &[disabled]:hover {
     cursor: not-allowed;
+  }
+}
+
+.zr-button-bar {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: var(--zr-rounding-small);
+  overflow: hidden;
+  border: 1px solid var(--zr-color-border);
+  box-shadow: 3px 2px 3px var(--zr-color-button-shadow);
+
+  &.zr-button-bar-rounded {
+    border-radius: var(--zr-rounding-full);
+  }
+
+  > * {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  > :not(:last-child) {
+    border-right: 1px solid var(--zr-color-border);
   }
 }
