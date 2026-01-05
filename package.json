@@ -16,6 +16,9 @@
     "./colors": {
       "scss": "./dist/colors.css"
     },
+    "./theme/*": {
+      "scss": "./dist/theme-*.css"
+    },
     "./text": {
       "scss": "./dist/text.css"
     },
@@ -85,5 +88,5 @@
     "vitest": "^4.0.7",
     "vitest-browser-lit": "^1.0.1"
   },
-  "packageManager": "pnpm@10.25.0"
+  "packageManager": "pnpm@10.27.0"
 }

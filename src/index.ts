@@ -22,6 +22,21 @@
  * SOFTWARE.
  */
 
-import "./constants.ts";
-import "./main.scss";
 import "./components/date-display/date-display.ts";
+import "./main.scss";
+
+export * from "./constants.ts";
+export {
+    TAG,
+    DISPLAY_TYPE_RELATIVE_FIRST,
+    DISPLAY_TYPE_ABSOLUTE_FIRST,
+    DISPLAY_TYPE_ONLY_RELATIVE,
+    DISPLAY_TYPE_ONLY_ABSOLUTE,
+    SECOND_POSITION_TOP,
+    SECOND_POSITION_RIGHT,
+    SECOND_POSITION_BOTTOM,
+    SECOND_POSITION_LEFT,
+    DateDisplayElement,
+} from "./components/date-display/date-display.ts";
+export type { DisplayType, SecondPosition, DateDisplay } from "./components/date-display/date-display.ts";
+

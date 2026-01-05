@@ -27,6 +27,19 @@ import * as path from "node:path";
 import dts from "vite-plugin-dts";
 import autoprefixer from "autoprefixer";
 import { NodePackageImporter } from "sass-embedded";
+import * as fs from "node:fs";
+
+function buildThemesEntries(): Record<string, string> {
+    const result = {};
+
+    const themes = fs.readdirSync(path.resolve(__dirname, "src/styles/themes"));
+    themes.forEach((theme) => {
+        const name = path.basename(theme).split(".")[0];
+        result[`theme-${name}`] = path.resolve(__dirname, "src/styles/themes", theme);
+    });
+
+    return result;
+}
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -42,6 +55,7 @@ export default defineConfig({
             entry: {
                 "zephyr": path.resolve(__dirname, "src/index.ts"),
                 "colors": path.resolve(__dirname, "src/styles/colors.scss"),
+                ...buildThemesEntries(),
                 "text": path.resolve(__dirname, "src/styles/text.scss"),
                 "panes": path.resolve(__dirname, "src/styles/panes.scss"),
                 "alerts": path.resolve(__dirname, "src/styles/alerts.scss"),
