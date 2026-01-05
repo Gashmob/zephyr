@@ -22,15 +22,30 @@
  * SOFTWARE.
  */
 
-:root {
-  --zr-spacing-small: 4px;
-  --zr-spacing-medium: 8px;
-  --zr-spacing-large: 16px;
-  --zr-spacing-extra-large: 24px;
+@use "sass:string";
+@use "sass:list";
 
-  --zr-rounding-small: 4px;
-  --zr-rounding-medium: 8px;
-  --zr-rounding-full: 1000px;
+@function number($string) {
+  // Matrices
+  $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
+  $numbers: 0 1 2 3 4 5 6 7 8 9;
 
-  --zr-border-medium: 4px;
+  // Result
+  $result: 0;
+
+  // Looping through all characters
+  @for $i from 1 through string.length($string) {
+    $character: string.slice($string, $i, $i);
+    $index: list.index($strings, $character);
+
+    @if not $index {
+      @warn "Unknown character `#{$character}`.";
+      @return false;
+    }
+
+    $number: list.nth($numbers, $index);
+    $result: $result * 10 + $number;
+  }
+
+  @return $result;
 }

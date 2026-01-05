@@ -62,6 +62,7 @@ export default defineConfig({
                 "layout": path.resolve(__dirname, "src/styles/layout.scss"),
                 "tabs": path.resolve(__dirname, "src/styles/tabs.scss"),
                 "badges": path.resolve(__dirname, "src/styles/badges.scss"),
+                "buttons": path.resolve(__dirname, "src/styles/buttons.scss"),
                 "date-display":
                     path.resolve(__dirname, "src/components/date-display/date-display.ts"),
             },
