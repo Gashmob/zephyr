@@ -34,6 +34,11 @@
 :root {
   --zr-font-family: "Inter Variable", sans-serif;
   --zr-font-family-mono: "JetBrains Mono Variable", monospace;
+
+  --zr-font-size-reset: initial;
+  --zr-font-size-small: 0.8em;
+  --zr-font-size-normal: 1em;
+  --zr-font-size-large: 1.5em;
 }
 
 body {

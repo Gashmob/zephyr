@@ -22,21 +22,50 @@
  * SOFTWARE.
  */
 
-@use "sass:map";
-@use "sass:string";
 @use "sass:list";
-@use "colors" as colors;
+@use "sass:string";
+@use "vars";
 @use "text";
+@use "colors" as colors;
 @use "utils" as utils;
 
-.zr-badge {
-  padding: var(--zr-spacing-small) var(--zr-spacing-medium);
-  font-size: 0.8em;
-  border-radius: 50px;
-  font-weight: 600;
+.zr-button {
+  border: none;
+  border-radius: var(--zr-rounding-small);
+  padding: var(--zr-spacing-medium) var(--zr-spacing-extra-large);
+  font-size: var(--zr-font-size-normal);
+  box-shadow: 3px 2px 3px var(--zr-color-button-shadow);
+  transition: 200ms box-shadow ease;
+  background-color: var(--zr-color-primary);
+  color: var(--zr-color-font);
+
+  &.zr-button-rounded {
+    border-radius: var(--zr-rounding-full);
+  }
+
+  &.zr-button-large {
+    padding: var(--zr-spacing-large) var(--zr-spacing-extra-large);
+    font-size: var(--zr-font-size-large);
+  }
+
+  &.zr-button-normal {
+    padding: var(--zr-spacing-medium) var(--zr-spacing-extra-large);
+    font-size: var(--zr-font-size-normal);
+  }
+
+  &.zr-button-small {
+    padding: var(--zr-spacing-medium) var(--zr-spacing-medium);
+    font-size: var(--zr-font-size-normal);
+  }
+
+  &.zr-button-mini {
+    padding: var(--zr-spacing-small) var(--zr-spacing-small);
+    font-size: var(--zr-font-size-small);
+    box-shadow: 2px 2px var(--zr-color-button-shadow);
+  }
 
   @each $name, $var in colors.$common_colors {
-    &.zr-badge-#{$name} {
+    &.zr-button-#{$name} {
       background-color: var(#{$var});
       @if (utils.number(list.nth(string.split($name, "-"), 2)) <= 300) {
         color: black;
@@ -44,5 +73,23 @@
         color: white;
       }
     }
+  }
+
+  &[disabled] {
+    filter: opacity(50%);
+    box-shadow: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &[disabled]:hover {
+    cursor: not-allowed;
   }
 }

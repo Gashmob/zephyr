@@ -37,6 +37,9 @@
     "./badges": {
       "scss": "./dist/badges.css"
     },
+    "./buttons": {
+      "scss": "./dist/buttons.css"
+    },
     "./date-display": {
       "types": "./dist/components/date-display/date-display.d.ts",
       "scss": "./dist/date-display.css",

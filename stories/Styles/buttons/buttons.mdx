@@ -1,0 +1,29 @@
+import {Canvas, Controls, Meta} from "@storybook/addon-docs/blocks";
+import ButtonsMeta, * as ButtonsStories from "./buttons.stories.ts";
+import "./buttons.scss";
+
+<Meta of={ButtonsMeta}/>
+
+# Buttons
+
+#### `@gashmob/zephyr/buttons`
+
+## Buttons
+
+These CSS class can be used as well on buttons and links
+
+<Canvas withToolbar={true} of={ButtonsStories.ButtonsStory}></Canvas>
+
+<Controls of={ButtonsStories.ButtonsStory} ></Controls>
+
+## Button bar
+
+<Canvas withToolbar={true} of={ButtonsStories.ButtonBarStory}></Canvas>
+
+<Controls of={ButtonsStories.ButtonBarStory} ></Controls>
+
+## Switch
+
+<Canvas withToolbar={true} of={ButtonsStories.SwitchStory}></Canvas>
+
+<Controls of={ButtonsStories.SwitchStory} ></Controls>
