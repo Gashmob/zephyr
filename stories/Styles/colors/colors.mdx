@@ -10,7 +10,9 @@ import "./colors.scss";
 
 ## Theme colors
 
-These colors can be customized via [theming](/?path=/docs/styles-colors--docs#theming). They are dark/light mode responsive.
+These colors can be customized via [theming](/?path=/docs/styles-colors--docs#theming). They are dark/light mode responsive using the attribute `data-dark-mode` on body tag.
+
+You can switch between dark/light mode and different themes using the 2 selectors on top of this page (they are on `system` and `default` by default).
 
 <Canvas of={ColorsStories.ThemeColorsStory}></Canvas>
 
@@ -23,4 +25,27 @@ A lot inspired from [Tailwind colors](https://tailwindcss.com/docs/colors), they
 
 ## Theming
 
-Not implemented yet
+You can customize theme colors by overriding CSS variables values. For that you need to include the following snippet after Zephyr imports:
+
+```scss
+:root {
+  // Here you define all colors variables presented in first table
+}
+
+@mixin dark-colors {
+  // And here their dark mode variant
+}
+
+@media (prefers-color-scheme: dark) {
+  body[data-dark-mode=system] {
+    @include dark-colors;
+  }
+}
+
+body[data-dark-mode=dark] {
+  @include dark-colors;
+}
+```
+
+There is already some pre-defined theme which can be used by importing `@gashmob/zephyr/theme/{name}`:
+- default

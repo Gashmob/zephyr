@@ -23,12 +23,24 @@
  */
 
 import type { StorybookConfig } from "@storybook/web-components-vite";
+import { mergeConfig } from "vitest/config";
+import { NodePackageImporter } from "sass-embedded";
 
 const config: StorybookConfig = {
     framework: "@storybook/web-components-vite",
     stories: ["../stories/**/*.mdx", "../stories/**/*.stories.ts"],
     addons: ["@storybook/addon-docs", "@storybook/addon-links", "@storybook/addon-a11y", "@storybook/addon-vitest"],
     staticDirs: ["./static"],
+    viteFinal: (config) => mergeConfig(config, {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    api: "modern",
+                    importers: [new NodePackageImporter()],
+                },
+            },
+        }
+    }),
 };
 
 export default config;

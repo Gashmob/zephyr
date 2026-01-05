@@ -23,6 +23,16 @@
  */
 import { Preview } from "@storybook/web-components-vite";
 import { html } from "lit";
+import "../src/main.scss";
+import default_theme from "../src/styles/themes/default.scss?inline";
+
+export function getTheme(name: string): string {
+    switch (name) {
+        default:
+        case "default":
+            return default_theme;
+    }
+}
 
 const preview: Preview = {
     parameters: {
@@ -40,24 +50,39 @@ const preview: Preview = {
         backgrounds: { disable: true },
     },
     globalTypes: {
-        theme: {
+        mode: {
             toolbar: {
-                title: "Theme",
+                title: "Mode",
                 icon: "circlehollow",
                 items: ["light", "dark", "system"],
                 dynamicTitle: true,
             },
         },
+        theme: {
+            toolbar: {
+                title: "Theme",
+                items: ["default"],
+                dynamicTitle: true,
+            },
+        },
     },
     initialGlobals: {
-        theme: "system",
+        mode: "system",
+        theme: "default",
     },
     decorators: [
         (Story, context) => {
-            context.canvasElement.ownerDocument.body.setAttribute("data-theme", context.globals.theme);
-            context.canvasElement.ownerDocument.body.querySelectorAll<HTMLDivElement>(".docs-story").forEach(
+            const doc = context.canvasElement.ownerDocument;
+
+            doc.body.setAttribute("data-dark-mode", context.globals.mode);
+            doc.body.querySelectorAll<HTMLDivElement>(".docs-story").forEach(
                 (elt) => elt.style.backgroundColor = "var(--zr-color-background)",
             );
+
+            const theme_stylesheet = new CSSStyleSheet();
+            theme_stylesheet.replaceSync(getTheme(context.globals.theme));
+            doc.adoptedStyleSheets = [theme_stylesheet];
+
             return html`${Story()}`;
         },
     ],

@@ -22,4 +22,7 @@
  * SOFTWARE.
  */
 
-@use "../../../src/main";
+declare module "*.scss?inline" {
+    const scss: string;
+    export default scss;
+}
