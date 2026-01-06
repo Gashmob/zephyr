@@ -125,5 +125,19 @@ export const ButtonBarStory: Story = {
 };
 
 export const SwitchStory: Story = {
-    render: () => html`Not implemented yet`,
+    args: {
+        color: sky_700,
+    },
+    render: () => html`
+        <div class="zr-layout-flex zr-layout-flex-gap-large">
+            <div class="zr-switch">
+                <input type="checkbox" id="my-checkbox"/>
+                <label for="my-checkbox"></label>
+            </div>
+            <div class="zr-switch">
+                <input type="checkbox" id="disabled-checkbox" disabled/>
+                <label for="disabled-checkbox"></label>
+            </div>
+        </div>
+    `,
 };
