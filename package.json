@@ -91,5 +91,5 @@
     "vitest": "^4.0.7",
     "vitest-browser-lit": "^1.0.1"
   },
-  "packageManager": "pnpm@10.27.0"
+  "packageManager": "pnpm@10.28.0"
 }
