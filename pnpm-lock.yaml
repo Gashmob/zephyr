@@ -16,7 +16,7 @@ importers:
         version: 5.2.8
       hybrids:
         specifier: ^9.1.20
-        version: 9.1.21
+        version: 9.1.22
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
@@ -1659,8 +1659,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  hybrids@9.1.21:
-    resolution: {integrity: sha512-UCmdUmFkQogser0LR1BpBDipXpfLmJG+XQsLMoQfJTae1/D6pxaowMDNZa5u8Axd8jVEzNAXILbE2GWTGtiYhA==}
+  hybrids@9.1.22:
+    resolution: {integrity: sha512-SsUk8GyP4g1zdSa+Da1tT+PCv1m/4yNPCjKzHOawEjJIl/Dyoyid5t6rtLX09ma+PANQ/FWyXzlhZJlLaeLpeg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -4447,7 +4447,7 @@ snapshots:
 
   husky@9.1.7: {}
 
-  hybrids@9.1.21: {}
+  hybrids@9.1.22: {}
 
   ignore@5.3.2: {}
 
