@@ -40,6 +40,9 @@
     "./buttons": {
       "scss": "./dist/buttons.css"
     },
+    "./inputs": {
+      "scss": "./dist/inputs.css"
+    },
     "./date-display": {
       "types": "./dist/components/date-display/date-display.d.ts",
       "scss": "./dist/date-display.css",
