@@ -1,7 +1,7 @@
 /**
  * MIT License
  *
- * Copyright (c) 2025-Present Kevin Traini
+ * Copyright (c) 2026-Present Kevin Traini
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,14 +22,52 @@
  * SOFTWARE.
  */
 
-@use "normalize.css/normalize.css";
-@use "./styles/vars";
-@use "./styles/colors";
-@use "./styles/text";
-@use "./styles/panes";
-@use "./styles/alerts";
-@use "./styles/layout";
-@use "./styles/tabs";
-@use "./styles/badges";
-@use "./styles/buttons";
-@use "./styles/inputs";
+@use "vars";
+@use "colors";
+
+.zr-form-element {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: var(--zr-spacing-small);
+  margin-bottom: var(--zr-spacing-medium);
+}
+
+.zr-label {
+  color: var(--zr-color-font-muted);
+  font-size: var(--zr-font-size-small);
+}
+
+.zr-input {
+  background-color: var(--zr-color-pane-background);
+  border: 1px solid var(--zr-color-border);
+  border-radius: var(--zr-rounding-small);
+  outline: none;
+  color: var(--zr-color-font);
+  padding: var(--zr-spacing-small) var(--zr-spacing-medium);
+
+  &[type=checkbox] {
+    margin-right: var(--zr-spacing-small);
+  }
+
+  &[type=radio] {
+    margin-right: var(--zr-spacing-small);
+  }
+
+  &[type=file] {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+  &[type=color] {
+    margin-right: var(--zr-spacing-small);
+    border: none;
+    background: none;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+  }
+}
